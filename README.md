@@ -6,10 +6,10 @@
 ## Результаты
 
 ### Консольное приложение Bank
-![Console output](images/1.jpg)
+![Console output](Images/1.jpg)
 
 ### Обозреватель тестов
-![Test Explorer](images/2.jpg)
+![Test Explorer](Images/2.jpg)
 
 ## Описание тестов
 
