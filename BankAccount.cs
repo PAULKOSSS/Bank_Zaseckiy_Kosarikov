@@ -46,17 +46,20 @@ namespace BankAccountNS
         /// <exception cref="System.ArgumentOutOfRangeException">
         /// Выбрасывается, если сумма меньше нуля или превышает текущий баланс.
         /// </exception>
+        public const string DebitAmountExceedsBalanceMessage = "Debit amount exceeds balance";
+        public const string DebitAmountLessThanZeroMessage = "Debit amount is less than zero";
+
         public void Debit(double amount)
         {
             if (amount > m_balance)
             {
-                throw new ArgumentOutOfRangeException("amount");
+                throw new ArgumentOutOfRangeException("amount", amount, DebitAmountExceedsBalanceMessage);
             }
             if (amount < 0)
             {
-                throw new ArgumentOutOfRangeException("amount");
+                throw new ArgumentOutOfRangeException("amount", amount, DebitAmountLessThanZeroMessage);
             }
-            m_balance += amount;   
+            m_balance -= amount;
         }
 
         /// <summary>
